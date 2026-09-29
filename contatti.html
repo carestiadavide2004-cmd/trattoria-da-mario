@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti — Trattoria da Mario</title>
+  <meta name="description" content="Indirizzo, telefono e orari di apertura della Trattoria da Mario.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="intestazione">
+    <div class="contenitore">
+      <a href="index.html" class="logo">Trattoria <span>da Mario</span></a>
+      <nav class="navigazione" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="galleria.html">Galleria</a></li>
+          <li><a href="contatti.html" aria-current="page">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="testata-pagina">
+      <h1>Contatti</h1>
+      <p>Vieni a trovarci o prenota il tuo tavolo</p>
+    </section>
+
+    <section class="sezione">
+      <div class="contenitore">
+        <div class="contatti-griglia">
+
+          <div class="scheda">
+            <h2>Dove siamo</h2>
+            <address>
+              <p>
+                <span class="etichetta">Indirizzo</span>
+                Via Roma 24<br>
+                00186 Roma (RM)
+              </p>
+              <p>
+                <span class="etichetta">Telefono</span>
+                <a href="tel:+390612345678">06 1234 5678</a>
+              </p>
+              <p>
+                <span class="etichetta">Email</span>
+                <a href="mailto:info@trattoriadamario.it">info@trattoriadamario.it</a>
+              </p>
+            </address>
+            <p>Si consiglia la prenotazione, soprattutto nel fine settimana.</p>
+          </div>
+
+          <div class="scheda">
+            <h2>Orari di apertura</h2>
+            <table class="orari">
+              <tbody>
+                <tr>
+                  <th scope="row">Lunedì</th>
+                  <td class="chiuso">Chiuso</td>
+                </tr>
+                <tr>
+                  <th scope="row">Martedì – Venerdì</th>
+                  <td>12:00 – 15:00<br>19:00 – 23:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sabato</th>
+                  <td>12:00 – 15:30<br>19:00 – 23:30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Domenica</th>
+                  <td>12:00 – 15:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="mappa">
+          <iframe
+            title="Mappa della Trattoria da Mario"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=12.4700%2C41.8950%2C12.4830%2C41.9030&amp;layer=mapnik&amp;marker=41.8990%2C12.4765"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <a href="index.html" class="logo">Trattoria <span>da Mario</span></a>
+    <p>Via Roma 24, 00186 Roma &middot; <a href="tel:+390612345678">06 1234 5678</a></p>
+    <p>&copy; 2026 Trattoria da Mario. Tutti i diritti riservati.</p>
+  </footer>
+
+  <a href="contatti.html" class="prenota-fisso">Prenota un tavolo</a>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleria — Trattoria da Mario</title>
+  <meta name="description" content="Foto dei piatti e degli ambienti della Trattoria da Mario.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="intestazione">
+    <div class="contenitore">
+      <a href="index.html" class="logo">Trattoria <span>da Mario</span></a>
+      <nav class="navigazione" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="galleria.html" aria-current="page">Galleria</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="testata-pagina">
+      <h1>Galleria</h1>
+      <p>Uno sguardo ai nostri piatti e alla nostra casa</p>
+    </section>
+
+    <section class="sezione">
+      <div class="contenitore">
+        <h2 class="titolo-sezione">I nostri piatti</h2>
+        <div class="ornamento">&#10022;</div>
+        <div class="galleria">
+          <figure class="galleria-elemento">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=75" alt="Tagliatelle con ragù di carne in padella" loading="lazy">
+            <figcaption>Tagliatelle al ragù</figcaption>
+          </figure>
+          <figure class="galleria-elemento">
+            <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=75" alt="Tagliere di salumi, formaggi, olive e pane" loading="lazy">
+            <figcaption>Tagliere della casa</figcaption>
+          </figure>
+          <figure class="galleria-elemento">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=75" alt="Tagliata di manzo con patate" loading="lazy">
+            <figcaption>Tagliata di manzo</figcaption>
+          </figure>
+          <figure class="galleria-elemento">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=75" alt="Fetta di tiramisù spolverata di cacao" loading="lazy">
+            <figcaption>Tiramisù della nonna</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="sezione sezione--alternata">
+      <div class="contenitore">
+        <h2 class="titolo-sezione">L'ambiente</h2>
+        <div class="ornamento">&#10022;</div>
+        <div class="galleria">
+          <figure class="galleria-elemento">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=75" alt="Sala del ristorante con tavoli in legno" loading="lazy">
+            <figcaption>La sala principale</figcaption>
+          </figure>
+          <figure class="galleria-elemento">
+            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=75" alt="Veranda con tavoli circondata dal verde" loading="lazy">
+            <figcaption>Il dehors estivo</figcaption>
+          </figure>
+          <figure class="galleria-elemento">
+            <img src="https://images.unsplash.com/photo-1533777324565-a040eb52facd?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=75" alt="Tavola apparecchiata con piatti della casa" loading="lazy">
+            <figcaption>La tavola apparecchiata</figcaption>
+          </figure>
+          <figure class="galleria-elemento">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=75" alt="Brindisi con calici di vino rosso" loading="lazy">
+            <figcaption>Un calice in compagnia</figcaption>
+          </figure>
+        </div>
+        <p class="credito-foto">Foto di esempio da <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <a href="index.html" class="logo">Trattoria <span>da Mario</span></a>
+    <p>Via Roma 24, 00186 Roma &middot; <a href="tel:+390612345678">06 1234 5678</a></p>
+    <p>&copy; 2026 Trattoria da Mario. Tutti i diritti riservati.</p>
+  </footer>
+
+  <a href="contatti.html" class="prenota-fisso">Prenota un tavolo</a>
+
+  <!-- Finestra per vedere le foto ingrandite (gestita da js/galleria.js) -->
+  <dialog class="lightbox" aria-label="Foto ingrandita">
+    <button type="button" class="lightbox-chiudi" aria-label="Chiudi">&times;</button>
+    <figure class="lightbox-contenuto">
+      <img class="lightbox-immagine" alt="">
+      <figcaption class="lightbox-didascalia"></figcaption>
+    </figure>
+  </dialog>
+
+  <script src="js/galleria.js"></script>
+
+</body>
+</html>
