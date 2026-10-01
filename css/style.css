@@ -406,6 +406,33 @@ h3 {
   font-weight: 700;
 }
 
+/* Numero di telefono in primo piano, per chi vuole prenotare chiamando */
+.scheda .telefono-evidenza {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--crema-scura);
+}
+
+.telefono-evidenza a {
+  font-family: var(--font-titoli);
+  font-size: clamp(1.9rem, 5vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--rosso);
+  transition: color 0.2s;
+}
+
+.telefono-evidenza a:hover,
+.telefono-evidenza a:focus-visible {
+  color: var(--rosso-scuro);
+  text-decoration: underline;
+  text-decoration-color: var(--oro);
+  text-underline-offset: 0.15em;
+}
+
 .orari {
   width: 100%;
   border-collapse: collapse;
@@ -710,6 +737,75 @@ body.lightbox-aperta {
   background-color: var(--oro);
   color: var(--rosso-scuro);
   transform: translateY(-2px);
+}
+
+/* ---------- Cursore a fetta di pizza (js/cursore.js) ---------- */
+
+/* La freccia del sistema sparisce solo mentre la pizza è visibile */
+.cursore-pizza-attivo,
+.cursore-pizza-attivo * {
+  cursor: none !important;
+}
+
+.cursore-pizza {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* La punta della fetta coincide con la posizione del mouse */
+  margin: -2px 0 0 -2px;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 0.2s;
+}
+
+.cursore-pizza--visibile {
+  opacity: 1;
+}
+
+.cursore-pizza-icona {
+  display: block;
+  /* Ruota e rimbalza attorno alla punta, così il punto di clic non si sposta */
+  transform-origin: 2px 2px;
+  filter: drop-shadow(0 1px 1.5px rgba(40, 10, 10, 0.35));
+  transition: transform 0.35s cubic-bezier(0.34, 1.8, 0.64, 1), opacity 0.2s;
+}
+
+.cursore-pizza-formaggio { fill: var(--oro-chiaro); }
+.cursore-pizza-crosta    { fill: var(--oro); }
+.cursore-pizza-salame    { fill: var(--rosso); }
+.cursore-pizza-basilico  { fill: #4f7a3a; }
+
+/* Contorno netto: la pizza resta riconoscibile sia sul crema sia sul rosso */
+.cursore-pizza-bordo {
+  fill: none;
+  stroke: var(--rosso-scuro);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+
+/* Sopra link, bottoni e foto: piccola rotazione con rimbalzo,
+   e un po' di trasparenza per lasciar leggere il testo sotto */
+.cursore-pizza--cliccabile .cursore-pizza-icona {
+  transform: rotate(-20deg) scale(1.15);
+  opacity: 0.85;
+}
+
+.cursore-pizza--premuto .cursore-pizza-icona {
+  transform: scale(0.85);
+  transition-duration: 0.1s;
+}
+
+.cursore-pizza--cliccabile.cursore-pizza--premuto .cursore-pizza-icona {
+  transform: rotate(-20deg) scale(0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursore-pizza,
+  .cursore-pizza-icona {
+    transition: none;
+  }
 }
 
 /* ---------- Piè di pagina ---------- */
